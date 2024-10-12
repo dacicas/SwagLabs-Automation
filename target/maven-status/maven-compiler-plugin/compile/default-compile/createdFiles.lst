@@ -1,0 +1,6 @@
+SwagLabsAutomation\Main.class
+SwagLabsAutomation\Chrome.class
+SwagLabsAutomation\DriverSingleton.class
+SwagLabsAutomation\DriverStrategy.class
+SwagLabsAutomation\Firefox.class
+SwagLabsAutomation\DriverStrategyImplementer.class
