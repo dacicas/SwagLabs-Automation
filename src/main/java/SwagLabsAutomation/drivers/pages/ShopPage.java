@@ -5,18 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
 public class ShopPage {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     public ShopPage() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
     }
 
     @FindBy(css = "#header_container > div.header_secondary_container > span")
@@ -47,78 +46,95 @@ public class ShopPage {
     private WebElement logout;
     @FindBy(id = "reset_sidebar_link")
     private WebElement resetAppState;
+
     public String getTitle(){
         String title = titleProducts.getText();
         return title;
     }
     public void clickHamburgerButton(){
+        wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
         hamburgerMenu.click();
     }
     public void clickSorter(){
+        wait.until(ExpectedConditions.elementToBeClickable(sorterDropdown));
         sorterDropdown.click();
     }
     public void addToCartBackpack(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartBackpack));
         addToCartBackpack.click();
     }
     public void addToCartBikeLight(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartBikeLight));
         addToCartBikeLight.click();
     }
     public void addToCartTShirt(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartTShirt));
         addToCartTShirt.click();
     }
     public void addToCartFleeceJacket(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartFleeceJacket));
         addToCartFleeceJacket.click();
     }
     public void addToCartBabyOnesie(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartBabyOnesie));
         addToCartBabyOnesie.click();
     }
     public void addToCartRedTShirt(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartRedTShirt));
         addToCartRedTShirt.click();
     }
 
     public void clickAllItems(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
         clickHamburgerButton();
+        wait.until(ExpectedConditions.elementToBeClickable(allItems));
         allItems.click();
     }
     public void clickAboutPage(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(about));
         clickHamburgerButton();
+        wait.until(ExpectedConditions.elementToBeClickable(about));
         about.click();
     }
     public void clickLogout(){
-        WebDriverWait waitForHamburgerMenu = new WebDriverWait(driver, Duration.ofSeconds(15));
-        waitForHamburgerMenu.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
+
+        wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
         clickHamburgerButton();
-        WebDriverWait waitForLogout = new WebDriverWait(driver, Duration.ofSeconds(15));
-        waitForLogout.until(ExpectedConditions.elementToBeClickable(logout));
+        wait.until(ExpectedConditions.elementToBeClickable(logout));
         logout.click();
     }
     public void clickResetAppState(){
+        wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
         clickHamburgerButton();
+        wait.until(ExpectedConditions.elementToBeClickable(resetAppState));
         resetAppState.click();
     }
     public void clickCart(){
+        wait.until(ExpectedConditions.elementToBeClickable(shoppingCart));
         shoppingCart.click();
     }
     public String getBackPack(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartBackpack));
         return addToCartBackpack.getText();
     }
     public String getBikeLight(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartBikeLight));
         return addToCartBikeLight.getText();
     }
     public String getTShirt(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartTShirt));
         return addToCartTShirt.getText();
     }
     public String getFleeceJacket(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartFleeceJacket));
         return addToCartFleeceJacket.getText();
     }
     public String getBabyOnesie(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartBabyOnesie));
         return addToCartBabyOnesie.getText();
     }
     public String getRedTShirt(){
+        wait.until(ExpectedConditions.visibilityOf(addToCartRedTShirt));
         return addToCartRedTShirt.getText();
     }
 }

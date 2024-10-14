@@ -24,6 +24,9 @@ public class Constants {
     public static final String TITLE_CHECKOUT_COMPLETE = "Checkout: Complete!";
     public static final String THANK_YOU_FOR_ORDER = "Thank you for your order!";
     public static final String THANK_YOU_MESSAGE = "Your order has been dispatched, and will arrive just as fast as the pony can get there!";
+    public static final String FIRST_NAME = "Maresal";
+    public static final String LAST_NAME= "Antonescu";
+    public static final String ZIP_CODE = "222311";
 
 
 }
