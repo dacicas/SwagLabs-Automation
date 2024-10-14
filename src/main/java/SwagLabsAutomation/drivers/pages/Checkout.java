@@ -15,7 +15,7 @@ public class Checkout {
     public Checkout() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        this.wait = new WebDriverWait(driver, 15);
     }
     @FindBy(id= "first-name")
     private WebElement firstNameInput;

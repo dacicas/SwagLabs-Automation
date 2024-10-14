@@ -1,6 +1,7 @@
 package SwagLabsAutomation;
 
 import SwagLabsAutomation.drivers.DriverSingleton;
+import SwagLabsAutomation.drivers.pages.Cart;
 import SwagLabsAutomation.drivers.pages.ShopPage;
 import SwagLabsAutomation.drivers.pages.SinginPage;
 import SwagLabsAutomation.utils.FrameworkProperties;
@@ -17,11 +18,20 @@ public class Main {
         //driver.quit();
         String expectedTitle = "Products";
         ShopPage shopPage = new ShopPage();
+        Cart newCart = new Cart();
         if(shopPage.getTitle().equals(expectedTitle)){
             System.out.println("Found Title : "+ expectedTitle);
         }else{
             System.out.println("Shit wrong title");
         }
+        //shopPage.addToCartBackpack();
+        shopPage.clickCart();
+        if (newCart.isItemPresent()){
+            System.out.println("There are items in cart");
+        }else {
+            System.out.println("Cart is empty");
+        }
+
         driver.quit();
     }
 }

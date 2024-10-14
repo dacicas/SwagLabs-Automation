@@ -15,7 +15,7 @@ public class CheckoutOverview {
     public CheckoutOverview() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        this.wait = new WebDriverWait(driver, 15);
     }
 
     @FindBy(css = "#header_container > div.header_secondary_container > span")
