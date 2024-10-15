@@ -9,13 +9,16 @@ import org.openqa.selenium.WebDriver;
 
 public class Main {
     public static void main(String[] args) {
+        //TODO:
+        //Add cucumber
+        //ADD BDD testing to the project
+        //Remove this :
         FrameworkProperties frameworkProperties = new FrameworkProperties();
         DriverSingleton driverSingleton = DriverSingleton.getInstance(frameworkProperties.getProperty("browser"));
         WebDriver driver = DriverSingleton.getDriver();
         driver.get("https://www.saucedemo.com");
         SinginPage singInPage = new SinginPage();
         singInPage.login();
-        //driver.quit();
         String expectedTitle = "Products";
         ShopPage shopPage = new ShopPage();
         Cart newCart = new Cart();
@@ -24,7 +27,7 @@ public class Main {
         }else{
             System.out.println("Shit wrong title");
         }
-        //shopPage.addToCartBackpack();
+        shopPage.addToCartBackpack();
         shopPage.clickCart();
         if (newCart.isItemPresent()){
             System.out.println("There are items in cart");

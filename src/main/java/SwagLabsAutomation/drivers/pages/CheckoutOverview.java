@@ -34,7 +34,7 @@ public class CheckoutOverview {
         wait.until(ExpectedConditions.visibilityOf(checkoutOverview));
         return checkoutOverview.getText();
     }
-    //NEED TO INVESTIGATE HOW TO CHECK ITEMS
+
     public String checkoutItemAvailabel() {
         wait.until(ExpectedConditions.visibilityOf(checkoutItemAvailabel));
         return checkoutItemAvailabel.getText();
