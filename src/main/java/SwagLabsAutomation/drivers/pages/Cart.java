@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Cart {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -16,7 +18,7 @@ public class Cart {
     public Cart() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
-        this.wait = new WebDriverWait(driver, 15);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     @FindBy(css = "#header_container > div.header_secondary_container > span")

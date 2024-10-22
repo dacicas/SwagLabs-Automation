@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SwagLabs Automation" />
+        <module name="SwagLabsAutomation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
