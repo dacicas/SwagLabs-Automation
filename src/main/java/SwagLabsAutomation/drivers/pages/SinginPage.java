@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class SinginPage {
     private WebDriver driver;
 
@@ -27,7 +29,7 @@ public class SinginPage {
     /*WebDriverWait wait = new WebDriverWait(driver, 15);*/
 
     public void login(){
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(username));
         username.click();
         username.sendKeys(Constants.STANDARD_USER);
