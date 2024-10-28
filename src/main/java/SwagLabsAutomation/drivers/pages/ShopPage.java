@@ -8,7 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Random;
 
 public class ShopPage {
     private WebDriver driver;
@@ -52,6 +56,9 @@ public class ShopPage {
     public String getTitle(){
         String title = titleProducts.getText();
         return title;
+    }
+    public WebElement returnBackpack(){
+        return addToCartBackpack;
     }
     public void clickHamburgerButton(){
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenu));
@@ -139,4 +146,5 @@ public class ShopPage {
         wait.until(ExpectedConditions.visibilityOf(addToCartRedTShirt));
         return addToCartRedTShirt.getText();
     }
+
 }

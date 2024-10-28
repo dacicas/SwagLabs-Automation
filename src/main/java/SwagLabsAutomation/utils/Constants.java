@@ -16,7 +16,7 @@ public class Constants {
     public static final String PASSWORD_FOR_ALL_USERS = "secret_sauce";
 
     //collection of strings from the website
-
+    public static final String URL = "https://www.saucedemo.com/";
     public static final String TITLE_PRODUCTS= "Products";
     public static final String TITLE_CART = "Your Cart";
     public static final String TITLE_CHECKOUT_INFORMATION = "Checkout: Your Information";
@@ -27,6 +27,15 @@ public class Constants {
     public static final String FIRST_NAME = "Maresal";
     public static final String LAST_NAME= "Antonescu";
     public static final String ZIP_CODE = "222311";
+    //Items text
+    public static final String BACKPACK = "Sauce Labs Backpack";
+    public static final String BIKE_LIGHT = "Sauce Labs Bike Light";
+    public static final String BOLT_TSHIRT = "Sauce Labs Bolt T-Shirt";
+    public static final String FLEECE_JACKET = "Sauce Labs Fleece Jacket";
+    public static final String ONESIE = "Sauce Labs Onesie";
+    public static final String TSHIRT ="Test.allTheThings() T-Shirt (Red)";
+
+
 
 
 }

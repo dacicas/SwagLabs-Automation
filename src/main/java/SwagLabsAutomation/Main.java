@@ -13,7 +13,7 @@ public class Main {
         //Add cucumber
         //ADD BDD testing to the project
         //Remove this :
-        FrameworkProperties frameworkProperties = new FrameworkProperties();
+        /*FrameworkProperties frameworkProperties = new FrameworkProperties();
         DriverSingleton driverSingleton = DriverSingleton.getInstance(frameworkProperties.getProperty("browser"));
         WebDriver driver = DriverSingleton.getDriver();
         driver.get("https://www.saucedemo.com");
@@ -29,12 +29,13 @@ public class Main {
         }
         shopPage.addToCartBackpack();
         shopPage.clickCart();
-        if (newCart.isItemPresent()){
+        if (newCart.isItemPresent(shopPage.returnBackpack())){
             System.out.println("There are items in cart");
         }else {
             System.out.println("Cart is empty");
         }
 
         driver.quit();
+    }*/
     }
 }
