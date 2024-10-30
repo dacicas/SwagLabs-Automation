@@ -3,10 +3,7 @@ package automation;
 import SwagLabsAutomation.config.RunFrameworkConfiguration;
 import SwagLabsAutomation.drivers.DriverSingleton;
 import SwagLabsAutomation.drivers.pages.*;
-import SwagLabsAutomation.utils.ConfigurationProperties;
-import SwagLabsAutomation.utils.Constants;
-import SwagLabsAutomation.utils.TestCases;
-import SwagLabsAutomation.utils.Utils;
+import SwagLabsAutomation.utils.*;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -54,8 +51,9 @@ public class SingInDefinition {
         checkoutComplete = new CheckoutComplete();
         TestCases[] tests = TestCases.values();
         test = report.startTest(tests[Utils.testCount].getTestName());
+        Log.getLogData(Log.class.getName());
+        Log.startTest(tests[Utils.testCount].getTestName());
         Utils.testCount++;
-
     }
     @After
     public void closeDriver(){
@@ -67,6 +65,7 @@ public class SingInDefinition {
     public void i_go_to_website(){
         driver = DriverSingleton.getDriver();
         driver.get("https://www.saucedemo.com/");
+        Log.info("Navigating to " + Constants.URL);
         test.log(LogStatus.PASS, "Navigating to " + Constants.URL);
     }
     @When("^I specify my credentials and click login")
