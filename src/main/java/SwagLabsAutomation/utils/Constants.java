@@ -27,6 +27,7 @@ public class Constants {
     public static final String FIRST_NAME = "Maresal";
     public static final String LAST_NAME= "Antonescu";
     public static final String ZIP_CODE = "222311";
+    public static final String NO_ITEMS_IN_CART = "Total: $0.00";
     //Items text
     public static final String BACKPACK = "Sauce Labs Backpack";
     public static final String BIKE_LIGHT = "Sauce Labs Bike Light";

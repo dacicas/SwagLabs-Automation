@@ -56,4 +56,12 @@ public class Checkout {
         postalCodeInput.click();
         postalCodeInput.sendKeys(Constants.ZIP_CODE);
     }
+    public void clickContinue(){
+        wait.until(ExpectedConditions.elementToBeClickable(continueButton));
+        continueButton.click();
+    }
+    public void clickCancel(){
+        wait.until(ExpectedConditions.elementToBeClickable(cancelButton));
+        cancelButton.click();
+    }
 }

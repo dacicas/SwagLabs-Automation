@@ -11,3 +11,6 @@ Feature: Shopping Automation
     And I add several items to cart
     And I check that those items are added
     And I go to checkout
+    And I add my details
+    And I confirm my items are added
+    Then I complete my order
