@@ -16,7 +16,5 @@ import org.junit.runner.RunWith;
 public class RunTest {
     @Test
     public void test(){
-    //TODO:create a check for items on cart page
-    //TODO:PROFIT?
     }
 }

@@ -22,7 +22,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.event.annotation.AfterTestExecution;
 import org.springframework.test.context.event.annotation.AfterTestMethod;
 
+import java.time.Duration;
 import java.util.ArrayList;
+
+import static java.lang.Thread.sleep;
 
 @CucumberContextConfiguration
 @ContextConfiguration(classes = RunFrameworkConfiguration.class)
@@ -56,10 +59,11 @@ public class SingInDefinition {
         Utils.testCount++;
     }
     @After
-    public void closeDriver(){
+    public void closeDriver() throws InterruptedException {
         report.endTest(test);
         report.flush();
         DriverSingleton.closeObjectInstance();
+        sleep(Duration.ofSeconds(3));
     }
     @Given("^I go to the Website")
     public void i_go_to_website(){
@@ -89,6 +93,7 @@ public class SingInDefinition {
         shopPage.addToCartRedTShirt();
         shopPage.addToCartBackpack();
         shopPage.addToCartBikeLight();
+        shopPage.clickCart();
     }
     @And("^I check that those items are added")
     public  void i_check_that_those_items_are_added(){
@@ -111,4 +116,26 @@ public class SingInDefinition {
         Assert.assertEquals(Constants.BACKPACK,cart.getBackpackText());
         Assert.assertEquals(Constants.BIKE_LIGHT, cart.getBikeLightText());
     }
+    @And("^I go to checkout")
+    public void i_go_to_checkout(){
+        cart.clickCheckOutButton();
+    }
+    @And("^I add my details")
+    public void i_add_my_details(){
+        checkout.inputFirstName();
+        checkout.inputLastName();
+        checkout.inputPostalCode();
+        checkout.clickContinue();
+    }
+    @And("^I confirm my items are added")
+    public void i_confirm_my_items_are_added(){
+        Assert.assertNotEquals(checkoutOverview.isTotalPresent(), Constants.NO_ITEMS_IN_CART);
+    }
+    @Then("^I complete my order")
+    public void i_complete_my_order(){
+        checkoutOverview.clickFinishButton();
+        Assert.assertEquals(checkoutComplete.getThankYouForOrder(), Constants.THANK_YOU_FOR_ORDER);
+        Assert.assertEquals(checkoutComplete.getThankYouDescription(), Constants.THANK_YOU_MESSAGE);
+    }
+
 }
