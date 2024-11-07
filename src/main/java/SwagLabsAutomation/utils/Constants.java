@@ -14,6 +14,7 @@ public class Constants {
     public static final String ERROR_USER = "error_user";
     public static final String VISUAL_USER = "visual_user";
     public static final String PASSWORD_FOR_ALL_USERS = "secret_sauce";
+    public static final String WRONG_PASSWORD = "Epic sadface: Username and password do not match any user in this service";
 
     //collection of strings from the website
     public static final String URL = "https://www.saucedemo.com/";
