@@ -1,6 +1,19 @@
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\DriverSingleton.java
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\Main.java
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\Chrome.java
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\DriverStrategyImplementer.java
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\Firefox.java
-D:\SwagLabs Automation\SwagLabs Automation\src\main\java\SwagLabsAutomation\DriverStrategy.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\config\RunFrameworkConfiguration.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\DriverSingleton.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\Cart.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\Checkout.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\CheckoutComplete.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\CheckoutOverview.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\ShopPage.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\pages\SinginPage.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\strategies\Chrome.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\strategies\DriverStrategy.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\strategies\DriverStrategyImplementer.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\drivers\strategies\Firefox.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\Main.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\ConfigurationProperties.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\Constants.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\FrameworkProperties.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\Log.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\TestCases.java
+C:\Users\danie\Documents\SwagLabsAutomation\SwagLabs-Automation\src\main\java\SwagLabsAutomation\utils\Utils.java

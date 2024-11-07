@@ -89,6 +89,10 @@ public class Cart {
         wait.until(ExpectedConditions.visibilityOf(onesie));
         return onesie.getText();
     }
+    public String getCheckOutButton(){
+        wait.until(ExpectedConditions.visibilityOf(checkoutButton));
+        return  checkoutButton.getText();
+    }
 
 
 }

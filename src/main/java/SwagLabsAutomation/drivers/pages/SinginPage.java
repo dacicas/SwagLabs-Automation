@@ -13,10 +13,12 @@ import java.time.Duration;
 
 public class SinginPage {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     public SinginPage(){
         driver= DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
     @FindBy(id = "user-name")
     private WebElement username;
@@ -25,6 +27,9 @@ public class SinginPage {
     private WebElement password;
     @FindBy(id ="login-button")
     private WebElement loginButton;
+    @FindBy(css = "#login_button_container > div > form > div.error-message-container.error > h3")
+    private WebElement failedLogin;
+
 
     /*WebDriverWait wait = new WebDriverWait(driver, 15);*/
 
@@ -39,6 +44,10 @@ public class SinginPage {
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         loginButton.click();
 
+    }
+    public String getFailedLogin(){
+        wait.until(ExpectedConditions.visibilityOf(failedLogin));
+        return failedLogin.getText();
     }
 
 }

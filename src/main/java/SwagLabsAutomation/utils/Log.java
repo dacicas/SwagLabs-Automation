@@ -26,5 +26,8 @@ public class Log {
     public static void warning(String message){
         logger.warn(message);
     }
+    public static void error(String message){logger.error(message);}
+    public static void fail(String message){logger.fatal(message);}
+    public static void debug(String message){logger.debug(message);}
 
 }
